@@ -38,9 +38,9 @@ function NavbarComponent() {
   return (
     <nav className="bg-gradient-to-r from-sky-500 to-indigo-500 p-4">
       <div className="container mx-auto">
-        <div className="flex justify-between items-center">
+        <div className="flex m-0.5 justify-between items-center">
           <NavLink to="/account" className="text-white font-bold text-xl">
-            HelpingHands 
+          Heartful Hand Foundation 
           </NavLink>
           <div className="flex space-x-4">
             {menuData.map((item) => (
