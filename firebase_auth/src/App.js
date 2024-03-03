@@ -5,6 +5,7 @@ import Account from "./componenets/Hero/Account";
 import Signup from "./componenets/Signup";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./componenets/ProtectedRoute";
+import About from "./pages/AboutUs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/about" element={<About />} />
           <Route path="/account" element={
           <ProtectedRoute>
             <Account />

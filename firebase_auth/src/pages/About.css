@@ -1,0 +1,72 @@
+/* About.css */
+
+/* Page Container */
+.pageContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .pageTitle {
+    font-size: 2.2rem;
+    color: #333;
+    text-align: center;
+    background-image: url('https://img.freepik.com/free-vector/flat-world-humanitarian-day-background_23-2149456286.jpg');
+    background-size: cover;
+    padding: 20px 0; /* Adjust padding as needed */
+    margin-bottom: 20px;
+  }
+  
+  /* Page Title */
+
+  
+  /* Founded Date */
+  .foundedDate {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Text Content */
+  .aboutText {
+    font-size: 0.8rem;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  /* Section Titles */
+  .sectionTitle {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Bullet List */
+  .bulletList {
+    font-size: 0.8rem;
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  /* Button Container */
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Link Buttons */
+  .linkButton {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .linkButton:hover {
+    background-color: #0056b3;
+  }
+  
