@@ -5,7 +5,9 @@ import Account from "./componenets/Hero/Account";
 import Signup from "./componenets/Signup";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./componenets/ProtectedRoute";
-import About from "./pages/AboutUs";
+import About from "./pages/AboutUs"
+import ContactUs from "./pages/ContactUs";
+
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
           <Route path="/" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/about" element={<About />} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+          {/* <Route path="/donatecart" */}
+          
           <Route path="/account" element={
           <ProtectedRoute>
             <Account />
