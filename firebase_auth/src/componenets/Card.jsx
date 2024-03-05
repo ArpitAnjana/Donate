@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Card({ nameofNgo, btnText = "Donate", desc, image }) {
   return (
@@ -15,9 +16,12 @@ function Card({ nameofNgo, btnText = "Donate", desc, image }) {
         <p className="mt-2 text-sm text-gray-300">
           desc: {desc}
         </p>
-        <button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
-          {btnText} &rarr;
-        </button>
+
+        <Link to='/donatecart'>
+  <button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-white">
+    {btnText} &rarr;
+  </button>
+</Link>
       </div>
     </div>
   );
