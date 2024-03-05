@@ -45,7 +45,7 @@ const DonateCart = () => {
 
   return (
     <div className="DonateCart min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 bg-cover">
-      <h1 className="calligraphy-heading text-white mb-8 animate__animated animate__fadeInUp">
+      <h1 className="calligraphy-heading text-white mb-8 animate_animated animate_fadeInUp">
         Donate Cart
       </h1>
       <div className="flex flex-wrap justify-around">

@@ -26,13 +26,16 @@ function NavbarComponent() {
       name: 'About'
     },
     {
-      path: '/contact',
+      path: '/ContactUs',
       name: 'Contact'
     },
     {
       path: '/dashboard',
       name: 'Dashboard'
     },
+    
+
+    
   ];
 
   return (
