@@ -5,13 +5,15 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-  }
+    font-weight: 200;
+   
+    }
   .pageTitle {
     font-size: 2.2rem;
     color: #333;
     text-align: center;
-    background-image: url('https://img.freepik.com/free-vector/flat-world-humanitarian-day-background_23-2149456286.jpg');
-    background-size: cover;
+    font-weight: 200;
+   
     padding: 20px 0; /* Adjust padding as needed */
     margin-bottom: 20px;
   }
@@ -21,6 +23,7 @@
   
   /* Founded Date */
   .foundedDate {
+    font-weight: 200;
     font-size: 0.8rem;
     color: #666;
     text-align: center;
@@ -29,6 +32,7 @@
   
   /* Text Content */
   .aboutText {
+    font-weight: 200;
     font-size: 0.8rem;
     color: #444;
     margin-bottom: 20px;
@@ -43,6 +47,7 @@
   
   /* Bullet List */
   .bulletList {
+    font-weight: 400;
     font-size: 0.8rem;
     list-style-type: disc;
     margin-left: 20px;

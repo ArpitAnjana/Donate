@@ -16,7 +16,23 @@ function App() {
         <Routes>
           <Route path="/" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/about" element={<About />} />
+          <Route
+  path="/about"
+  element={
+    <div
+      style={{
+        backgroundImage: "url('https://img.freepik.com/free-vector/flat-world-humanitarian-day-background_23-2149456286.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '100vh', // Ensures the background covers the entire viewport height
+      }}
+    >
+      <About />
+    </div>
+  }
+/>
+Make sure
           <Route path="/account" element={
           <ProtectedRoute>
             <Account />
