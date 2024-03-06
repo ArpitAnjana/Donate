@@ -2,7 +2,9 @@
 
 /* Page Container */
 .pageContainer {
-    max-width: 800px;
+    /* max-width: 800px;
+     */
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
     font-weight: 200;
