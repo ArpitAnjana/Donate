@@ -1,6 +1,7 @@
 // src/pages/DonateCart.js
 import React, { useState } from 'react';
 import './donatecart.css';
+import NavbarComponent from '../componenets/Navbar/Navbar';
 const items = [
   { id: 1, name: 'Blanket', price: 100, limit: 5, imageUrl: 'https://images.pexels.com/photos/2828584/pexels-photo-2828584.jpeg' },
   { id: 2, name: 'Clothes', price: 100, limit: 5, imageUrl: 'https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=600' },
@@ -44,7 +45,10 @@ const DonateCart = () => {
   };
 
   return (
-    <div className="DonateCart min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 bg-cover">
+    <>
+    <NavbarComponent />
+    
+    <div className="DonateCart min-h-screen flex flex-col justify-center items-center bg-slate-400">
       <h1 className="calligraphy-heading text-white mb-8 animate_animated animate_fadeInUp">
         Donate Cart
       </h1>
@@ -87,6 +91,7 @@ const DonateCart = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

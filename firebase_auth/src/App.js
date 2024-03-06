@@ -7,6 +7,7 @@ import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./componenets/ProtectedRoute";
 import About from "./pages/AboutUs";
 import DonateCart from "./pages/donatecart";
+import ContactUs from "./pages/ContactUs";
 function App() {
   return (
     <div>
@@ -35,6 +36,8 @@ function App() {
 Make sure
           <Route path="/about" element={<About />} />
           <Route path="/donatecart" element={<DonateCart />} />
+          <Route path="/ContactUs" element={<ContactUs />} />
+         
           <Route path="/account" element={
           <ProtectedRoute>
             <Account />
