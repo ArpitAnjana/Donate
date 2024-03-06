@@ -6,7 +6,7 @@ import Signup from "./componenets/Signup";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./componenets/ProtectedRoute";
 import About from "./pages/AboutUs";
-
+import DonateCart from "./pages/donatecart";
 function App() {
   return (
     <div>
@@ -33,6 +33,8 @@ function App() {
   }
 />
 Make sure
+          <Route path="/about" element={<About />} />
+          <Route path="/donatecart" element={<DonateCart />} />
           <Route path="/account" element={
           <ProtectedRoute>
             <Account />
@@ -40,6 +42,7 @@ Make sure
           } 
           />
         </Routes>
+        
       </AuthContextProvider>
 
     </div>
