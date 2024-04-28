@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import './donatecart.css';
 import NavbarComponent from '../componenets/Navbar/Navbar';
+import axios from "axios";
+import Second from "../assets/img5.jpeg";
 const items = [
   { id: 1, name: 'Blanket', price: 100, limit: 5, imageUrl: 'https://images.pexels.com/photos/2828584/pexels-photo-2828584.jpeg' },
   { id: 2, name: 'Clothes', price: 100, limit: 5, imageUrl: 'https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=600' },
@@ -13,7 +15,38 @@ const items = [
 const DonateCart = () => {
   const [cart, setCart] = useState([]);
   const [totalAmount, setTotalAmount] = useState(0);
+  const checkoutHandler = async (amount) => {
 
+    const { data: { key } } = await axios.get("http://www.localhost:4000/api/getkey")
+
+    const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
+        amount
+    })
+
+    const options = {
+        key,
+        amount: totalAmount,
+        currency: "INR",
+        name: "Donation",
+        description: "Tutorial of RazorPay",
+        image: Second,
+        order_id: order.id,
+        callback_url: "http://localhost:4000/api/paymentverification",
+        prefill: {
+            name: "Gaurav Kumar",
+            email: "gaurav.kumar@example.com",
+            contact: "9999999999"
+        },
+        notes: {
+            "address": "Razorpay Corporate Office"
+        },
+        theme: {
+            "color": "#121212"
+        }
+    };
+    const razor = new window.Razorpay(options);
+    razor.open();
+}
   const addToCart = (item) => {
     const existingItem = cart.find((cartItem) => cartItem.id === item.id);
 
@@ -84,7 +117,7 @@ const DonateCart = () => {
           <p className="text-xl font-semibold mt-4">Total: ₹{totalAmount}</p>
           <button
             className="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-            onClick={handlePay}
+            onClick={() => checkoutHandler(totalAmount)}
           >
             Pay
           </button>

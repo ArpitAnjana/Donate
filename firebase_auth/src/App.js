@@ -8,6 +8,8 @@ import ProtectedRoute from "./componenets/ProtectedRoute";
 import About from "./pages/AboutUs";
 import DonateCart from "./pages/donatecart";
 import ContactUs from "./pages/ContactUs";
+import PaymentSuccess from "./paymentsussess";
+
 function App() {
   return (
     <div>
@@ -37,7 +39,8 @@ Make sure
           <Route path="/about" element={<About />} />
           <Route path="/donatecart" element={<DonateCart />} />
           <Route path="/ContactUs" element={<ContactUs />} />
-         
+      
+          <Route path="/paymentsuccess" element={<PaymentSuccess />} />
           <Route path="/account" element={
           <ProtectedRoute>
             <Account />
