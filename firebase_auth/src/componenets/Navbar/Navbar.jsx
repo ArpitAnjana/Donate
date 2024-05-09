@@ -33,6 +33,10 @@ function NavbarComponent() {
       path: '/dashboard',
       name: 'Dashboard'
     },
+    {
+      path: '/Gmap',
+      name: 'Gmap'
+    },
     
 
     

@@ -9,6 +9,9 @@ import About from "./pages/AboutUs";
 import DonateCart from "./pages/donatecart";
 import ContactUs from "./pages/ContactUs";
 import PaymentSuccess from "./paymentsussess";
+import Fundraiser from "./pages/fundraiser"
+import Gmap from "./pages/Gmap";
+
 
 function App() {
   return (
@@ -19,6 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/fundraiser" element={<Fundraiser />} />
+
           <Route
   path="/about"
   element={
@@ -39,7 +44,7 @@ Make sure
           <Route path="/about" element={<About />} />
           <Route path="/donatecart" element={<DonateCart />} />
           <Route path="/ContactUs" element={<ContactUs />} />
-      
+          <Route path="/Gmap" element={<Gmap/>} />
           <Route path="/paymentsuccess" element={<PaymentSuccess />} />
           <Route path="/account" element={
           <ProtectedRoute>

@@ -10,14 +10,10 @@ import container2img1 from "../../assets/img5.jpeg";
 import Footer from "../footer/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+// import "./Card.css"
 import First from "../../assets/img13.jpeg";
 import Second from "../../assets/img5.jpeg";
 import Third from "../../assets/img11.jpeg";
-// import Fourth from "../assets/img12.jpeg";
-// import Fifth from "../assets/img13.jpeg";
-// import Sixth from "../assets/img16.jpeg";
-// import Seventh from "../assets/img15.jpeg";
 
 const Account = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -129,13 +125,27 @@ const Account = () => {
           className="flex justify-center p-2 gap-x-20 max-w-screen-xl mx-auto m-10"
         >
           {ngoData.map((data, index) => (
-            <Card
+            <div
               key={index}
-              nameofNgo={data.nameofNgo}
-              desc={data.desc}
-              image={data.img}
-            />
+              className="card-container"
+            >
+              <div className="card overflow-hidden transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
+                <Card
+                  nameofNgo={data.nameofNgo}
+                  desc={data.desc}
+                  image={data.img}
+                />
+              </div>
+            </div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-8">
+          <Link to="/fundraiser">
+            <button className="fundbtn m-3 inline-flex cursor-pointer items-center text-sm font-semibold text-black">
+              fundraiser page &rarr;
+            </button>
+          </Link>
         </div>
       </div>
       <Footer />
